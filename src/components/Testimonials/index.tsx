@@ -5,29 +5,29 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    text: "The guidance was incredibly accurate and helped me make an important career decision.",
-    author: "Client from USA",
+    text: "I want to thank Mr. Aditya who helped me in every consequence without having the hurry for fees or anything. His predictions are always correct as if he's the one who wrote it! He'll tell you exactly where you'll lack and where and when exactly everything will align in your favor! Again thanks a lot sir!!",
+    author: "Client via WhatsApp",
+    service: "Spiritual Guidance"
+  },
+  {
+    text: "Absolutely loved the session with Aditya Sevani ✨ Very accurate reading, helpful remedies, and such a positive vibe throughout the conversation 💫 Felt really good after talking to him. Thank you so much 🤍",
+    author: "Karan Sevani",
     service: "Tarot Card Reading"
   },
   {
-    text: "Very honest consultation. No unnecessary fear or pressure. I felt completely at peace.",
-    author: "Client from India",
-    service: "Face Reading"
-  },
-  {
-    text: "I booked Numerology and was amazed by the accuracy. Highly recommended for finding direction.",
-    author: "Client from UK",
-    service: "Numerology"
-  },
-  {
-    text: "Professional online consultation from Canada. The session was transformative.",
-    author: "Client from Canada",
+    text: "Ohh Sir, you are just divine... your Tarot readings are more than predictions, they are blessings of guidance. The clarity, the direction, and the positivity you bring is beyond words. Haven't Seen Such An Amazing Tarot Reader Like You Before 🥰🙏",
+    author: "Client via WhatsApp",
     service: "Tarot Card Reading"
   },
   {
-    text: "Patient, practical and spiritually uplifting. Aditya ji gave me clarity when I needed it most.",
-    author: "Client from UAE",
-    service: "Complete Consultation"
+    text: "I came across Aditya Sir on Google Maps... From the moment we met him, his calm and composed energy made us feel instantly comfortable. He patiently listened to each one of them, giving us thoughtful and insightful answers. Aditya Sir truly has a gift — not just as a tarot reader, but as someone who radiates kindness and positive energy.",
+    author: "Priyam Dixit",
+    service: "Personal Session"
+  },
+  {
+    text: "Tarot Reader Aditya is highly intuitive and guided me with accurate and insightful readings. One can definitely rely on him for guidance and answers, helping navigate life's path with greater clarity and confidence.",
+    author: "Tanmay Sharma",
+    service: "Tarot Card Reading"
   }
 ];
 

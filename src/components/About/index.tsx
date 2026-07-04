@@ -15,10 +15,8 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden glass-panel border-white/50 relative">
-               {/* Placeholder for real portrait */}
-               <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                  <span className="text-primary/30 font-heading text-2xl">Editorial Portrait</span>
-               </div>
+               {/* Real portrait */}
+               <img src="/aditya-about.jpg" alt="Aditya Sevani" className="absolute inset-0 w-full h-full object-cover object-center" />
                
                {/* Decorative elements */}
                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-royal-gold/20 rounded-full blur-2xl" />

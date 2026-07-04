@@ -62,10 +62,9 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative h-[600px] w-full hidden lg:block"
         >
-          {/* Main Portrait Placeholder - to be replaced with actual image */}
-          <div className="absolute inset-0 rounded-2xl overflow-hidden glass-panel flex items-center justify-center bg-white/40 border-white/40 shadow-2xl">
-            <span className="text-primary/40 font-heading text-3xl">Portrait of Aditya Sevani</span>
-            {/* <img src="/portrait.jpg" alt="Aditya Sevani" className="w-full h-full object-cover" /> */}
+          {/* Main Portrait - To be replaced with actual image */}
+          <div className="absolute inset-0 rounded-2xl overflow-hidden glass-panel flex items-center justify-center border-white/40 shadow-2xl">
+            <img src="/aditya-hero.jpg" alt="Aditya Sevani - Tarot Reader" className="w-full h-full object-cover object-top" />
           </div>
 
           {/* Floating Card 1 */}
