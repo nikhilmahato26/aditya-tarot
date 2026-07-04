@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-ivory text-dark font-body selection:bg-primary/20 selection:text-primary relative overflow-hidden">
+    <div className="min-h-screen bg-dark text-white font-body selection:bg-primary/30 selection:text-white relative overflow-hidden">
       <TarotBackground />
       <Navbar />
       

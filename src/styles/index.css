@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #4B1D6B;
+  --color-primary: #7B3FA0;
   --color-royal-gold: #D4AF37;
   --color-ivory: #FAF8F4;
   --color-soft-lavender: #F4EFFA;
-  --color-dark: #1B1B1B;
+  --color-dark: #131318;
+  --color-dark-card: #1E1E26;
+  --color-dark-border: rgba(255,255,255,0.08);
   
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
@@ -15,7 +17,7 @@
 
 @layer base {
   body {
-    @apply bg-ivory text-dark font-body antialiased selection:bg-primary/20 selection:text-primary;
+    @apply bg-dark text-white font-body antialiased selection:bg-primary/30 selection:text-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -25,39 +27,61 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
   }
   
   .glass-dark {
-    @apply bg-dark/70 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)];
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-[#8B5FBF] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#A855F7] to-[#D4AF37] bg-clip-text text-transparent;
   }
   
   .bg-gradient-accent {
-    @apply bg-gradient-to-r from-primary to-[#8B5FBF];
+    @apply bg-gradient-to-r from-primary to-[#A855F7];
   }
   
   .perspective-1000 {
     perspective: 1000px;
   }
+  
+  .dark-card {
+    background: #1E1E26;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .dark-card-hover {
+    background: #22222C;
+    border: 1px solid rgba(168,85,247,0.2);
+  }
+  
+  .dark-input {
+    background: #1A1A22;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+  }
+  
+  .dark-input:focus {
+    border-color: rgba(168,85,247,0.5);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(168,85,247,0.1);
+  }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-ivory); 
+  background: #131318;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary); 
+  background: #7B3FA0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b1754; 
+  background: #A855F7;
 }
 
 /* Lenis smooth scroll */

@@ -34,18 +34,18 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-24" style={{ background: '#0D0D12' }}>
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-heading text-4xl md:text-5xl font-bold text-dark mb-6"
+            className="font-heading text-4xl md:text-5xl font-bold text-white mb-6"
           >
             Frequently Asked <span className="text-gradient">Questions</span>
           </motion.h2>
-          <p className="text-dark/70 text-lg font-light">
+          <p className="text-lg font-light" style={{ color: 'rgba(255,255,255,0.6)' }}>
             Find answers to common questions about consultations and processes.
           </p>
         </div>
@@ -58,23 +58,25 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={cn(
-                "border rounded-2xl overflow-hidden transition-colors duration-300",
-                openIndex === index ? "border-primary/20 bg-soft-lavender/30" : "border-gray-100 bg-white"
-              )}
+              className="rounded-2xl overflow-hidden transition-all duration-300"
+              style={{
+                background: openIndex === index ? '#1E1A2E' : '#1A1A22',
+                border: openIndex === index ? '1px solid rgba(168,85,247,0.3)' : '1px solid rgba(255,255,255,0.07)',
+              }}
             >
               <button
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-heading font-semibold text-xl text-dark pr-8">
+                <span className="font-heading font-semibold text-xl text-white pr-8">
                   {faq.question}
                 </span>
                 <ChevronDown 
                   className={cn(
-                    "text-primary shrink-0 transition-transform duration-300",
+                    "shrink-0 transition-transform duration-300",
                     openIndex === index ? "rotate-180" : ""
-                  )} 
+                  )}
+                  style={{ color: '#A855F7' }}
                   size={20} 
                 />
               </button>
@@ -87,7 +89,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-5 pt-0 text-dark/70 font-light leading-relaxed">
+                    <div className="px-6 pb-5 pt-0 font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
                       {faq.answer}
                     </div>
                   </motion.div>
