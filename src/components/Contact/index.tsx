@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 type FormData = {
@@ -100,7 +100,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-3 text-white px-8 py-4 rounded-full font-buttons text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
                 style={{ background: '#25D366' }}
               >
-                <MessageCircle size={20} />
+                <img src="/whatsapp-logo.png" alt="WhatsApp" className="w-5 h-5" />
                 Message on WhatsApp
               </a>
               <a 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MessageCircle, PhoneCall, FileText, ChevronUp } from 'lucide-react';
+import { PhoneCall, FileText, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function FloatingButtons() {
@@ -34,10 +34,10 @@ export default function FloatingButtons() {
         href="https://wa.me/919784249695" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all pointer-events-auto"
+        className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all pointer-events-auto overflow-hidden"
         aria-label="WhatsApp Us"
       >
-        <MessageCircle size={28} />
+        <img src="/whatsapp-logo.png" alt="WhatsApp" className="w-14 h-14 object-cover" />
       </a>
 
       {/* Call Button */}
