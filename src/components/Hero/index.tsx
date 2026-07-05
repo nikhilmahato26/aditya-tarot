@@ -25,36 +25,69 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          {/* Mobile-only circular profile photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex justify-center mb-8 lg:hidden"
-          >
-            <div style={{
-              width: '160px',
-              height: '160px',
-              borderRadius: '50%',
-              padding: '3px',
-              background: 'linear-gradient(135deg, #7B3FA0, #D4AF37, #A855F7)',
-              boxShadow: '0 0 40px rgba(168,85,247,0.4)',
-            }}>
+          {/* Mobile-only circular profile photo + floating cards */}
+          <div className="lg:hidden flex flex-col items-center mb-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="mb-6"
+            >
               <div style={{
-                width: '100%',
-                height: '100%',
+                width: '220px',
+                height: '220px',
                 borderRadius: '50%',
-                overflow: 'hidden',
-                border: '3px solid #0D0D12',
+                padding: '3px',
+                background: 'linear-gradient(135deg, #7B3FA0, #D4AF37, #A855F7)',
+                boxShadow: '0 0 60px rgba(168,85,247,0.5)',
               }}>
-                <img
-                  src="/aditya-hero.jpg"
-                  alt="Aditya Sevani - Tarot Reader"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
-                />
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  border: '3px solid #0D0D12',
+                }}>
+                  <img
+                    src="/aditya-hero.jpg"
+                    alt="Aditya Sevani - Tarot Reader"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                  />
+                </div>
               </div>
+            </motion.div>
+
+            {/* Mobile Floating Cards */}
+            <div className="flex flex-wrap justify-center gap-3 w-full">
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="px-4 py-3 rounded-2xl flex items-center gap-2 shadow-xl"
+                style={{ background: '#1E1E28', border: '1px solid rgba(255,255,255,0.1)' }}
+              >
+                <div className="text-xl">🌍</div>
+                <p className="font-medium text-xs text-white">Worldwide Online<br/>Consultations</p>
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="px-4 py-3 rounded-2xl flex items-center gap-2 shadow-xl"
+                style={{ background: '#1E1E28', border: '1px solid rgba(255,255,255,0.1)' }}
+              >
+                <div className="text-xl">❤️</div>
+                <p className="font-medium text-xs text-white">Honest & Fear-Free<br/>Guidance</p>
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="px-4 py-3 rounded-2xl flex items-center gap-2 shadow-xl"
+                style={{ background: '#1E1E28', border: '1px solid rgba(255,255,255,0.1)' }}
+              >
+                <div className="text-xl">📞</div>
+                <p className="font-medium text-xs text-white">Chat • Phone • Video</p>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
