@@ -92,7 +92,7 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="mt-12">
+            <div className="mt-12 flex flex-wrap gap-4">
               <a 
                 href="https://wa.me/919784249695" 
                 target="_blank" 
@@ -102,6 +102,20 @@ export default function Contact() {
               >
                 <MessageCircle size={20} />
                 Message on WhatsApp
+              </a>
+              <a 
+                href="https://www.instagram.com/tarot_aditya?igsh=MXRvNTE0dHdpZDRqaQ==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-white px-8 py-4 rounded-full font-buttons text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                style={{ background: 'linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Follow on Instagram
               </a>
             </div>
           </motion.div>

@@ -25,6 +25,37 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl"
         >
+          {/* Mobile-only circular profile photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="flex justify-center mb-8 lg:hidden"
+          >
+            <div style={{
+              width: '160px',
+              height: '160px',
+              borderRadius: '50%',
+              padding: '3px',
+              background: 'linear-gradient(135deg, #7B3FA0, #D4AF37, #A855F7)',
+              boxShadow: '0 0 40px rgba(168,85,247,0.4)',
+            }}>
+              <div style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                border: '3px solid #0D0D12',
+              }}>
+                <img
+                  src="/aditya-hero.jpg"
+                  alt="Aditya Sevani - Tarot Reader"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                />
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +76,7 @@ export default function Hero() {
             Gain trusted spiritual guidance through Tarot Card Reading, Face Reading, and Numerology with Aditya Sevani. Every consultation is rooted in honesty, compassion, and spiritual integrity.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <a href="#contact" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full font-buttons text-base shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all text-white" style={{ background: 'linear-gradient(135deg, #7B3FA0, #A855F7)' }}>
               <Calendar size={20} />
               Book Your Reading
@@ -53,6 +84,23 @@ export default function Hero() {
             <a href="https://wa.me/919784249695" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full font-buttons text-base hover:-translate-y-1 transition-all group" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'white' }}>
               <MessageCircle size={20} className="text-[#25D366] group-hover:scale-110 transition-transform" />
               WhatsApp Now
+            </a>
+            <a href="https://www.instagram.com/tarot_aditya?igsh=MXRvNTE0dHdpZDRqaQ==" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-4 rounded-full font-buttons text-base hover:-translate-y-1 transition-all group" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', color: 'white' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:scale-110 transition-transform" style={{ stroke: 'url(#ig-grad-hero)' }}>
+                <defs>
+                  <linearGradient id="ig-grad-hero" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#f09433" />
+                    <stop offset="25%" stopColor="#e6683c" />
+                    <stop offset="50%" stopColor="#dc2743" />
+                    <stop offset="75%" stopColor="#cc2366" />
+                    <stop offset="100%" stopColor="#bc1888" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Instagram
             </a>
           </div>
         </motion.div>
